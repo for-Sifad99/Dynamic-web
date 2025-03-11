@@ -1,12 +1,10 @@
 // Random color changing functionality setting:
-document.getElementById("bg-btn")
-    .addEventListener("click", function() {
+document.getElementById("bg-btn").addEventListener('click', function() {
   
   let randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
 
   document.body.style.backgroundColor = randomColor;
 });
-
 
 
 
@@ -23,13 +21,14 @@ document.getElementById("dateDiv").innerHTML = finalDate;
 
 
 
-
 // redirect to the next html page
-document.getElementById('next-html').addEventListener('click', function(){
-  window.location.href='./next.html';
+document.getElementById('next-html')
+    .addEventListener('click', function(){
+    window.location.href='next.html';
 })
 
 
+let clickedButtons = 0;
 // Doing Dynamic of all buttons by 
 function dynamicFunc(mainBtn, cardHead){
 
@@ -73,6 +72,14 @@ function dynamicFunc(mainBtn, cardHead){
   const cardHeadInnerText = document.getElementById(cardHead).innerText; 
   historyH3.innerText = `You have completed tha task ${cardHeadInnerText} at: ${formattedTime}`;
   historyParent.appendChild(historyH3);
+
+  // Increase button click count
+  clickedButtons++;
+
+  // Check if it's the last (6th) button
+  if (clickedButtons === 6) {
+    alert("Congrats!!! You have completed the all current task");
+  }
   })
 }
 // calling function to create all button dynamic:
@@ -82,7 +89,6 @@ dynamicFunc('card3-btn', "card3-head");
 dynamicFunc('card4-btn', "card4-head");
 dynamicFunc('card5-btn', "card5-head");
 dynamicFunc('card6-btn', "card6-head");
-
 
 
 // history remove function:
@@ -96,6 +102,7 @@ function historyRemoveFunc (removeBtn, historyDiv){
 }
 // calling function to create history button dynamic:
 historyRemoveFunc('history-btn', "history-parent");
+
 
 
 

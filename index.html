@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Favicon CND -->
+  <link rel="icon" href="./images/logo.png" type="image/x-icon">
   <!-- Tailwind CND -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <!-- DaisyUI CND -->
@@ -25,9 +27,8 @@
       margin: 10px 9px 4px 9px;
       border-radius: 7px;
     }
-    /*py-2 pl-3 mx-3 bg-[#F4F7FF] rounded-md mb-4" */
   </style>
-  <title>Document</title>
+  <title>DevBoard</title>
 </head>
 <body class="bg-[#F4F7FF] min-h-screen poppins-thin">
 <!-- Navbar section -->
@@ -49,7 +50,8 @@
 </div>
 </nav>
   <!-- main section -->
-<section class="min-h-screen mx-12 flex">
+<main class="min-h-screen mx-12">
+  <section class=" flex">
     <!-- Two div container -->
     <div class="bg-[#FFFFFF] rounded-xl">
       <!-- Three cards div -->
@@ -152,7 +154,7 @@
           </div>
           <div class="flex items-center space-x-5">
               <div>
-                <h5 cclass="text-xs font-light">Deadline</h5>
+                <h5 class="text-xs font-light">Deadline</h5>
                 <h3 class="text-base font-semibold">21 March 2025</h3>
               </div>
               <button id="card5-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
@@ -187,7 +189,8 @@
           <div id="history-parent"></div>
     </div>
 </section>
+</main>
 <!-- js Link -->
-<script src="index.js"></script>
+<script src="./index.js"></script>
 </body>
 </html>

@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon CND -->
+    <link rel="icon" href="./images/logo.png" type="image/x-icon">
   <!-- Tailwind CND -->
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
   <!-- DaisyUI CND -->
@@ -17,21 +19,21 @@
   font-family: "Poppins", sans-serif;
   }
   </style>
-  <title>Document</title>
+  <title>DEV.Questions</title>
 </head>
 <body class="bg-[#F4F7FF] min-h-screen poppins-thin">
 <!-- Navbar section -->
 <nav class="py-3 px-12" >
-  <div class="navbar bg-[#FFFFFF] rounded-xl">
-<div class="navbar-start">
-  <div class="flex items-center">
-      <img src="./images/logo.png" alt="">
-      <h1 class="text-[#00303C] lg:text-4xl text-3xl">Dev<span class="text-[#000000] font-bold">Board</span></h1>
-  </div>
-</div>
-<div class="navbar-end lg:space-x-8 space-x-3">
-  <button id="card1-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Back to Desk</button>
-</div>
+<div class="navbar bg-[#FFFFFF] rounded-xl">
+    <div class="navbar-start">
+      <div class="flex items-center">
+          <img src="./images/logo.png" alt="">
+          <h1 class="text-[#00303C] lg:text-4xl text-3xl">Dev<span class="text-[#000000] font-bold">Board</span></h1>
+      </div>
+    </div>
+    <div class="navbar-end lg:space-x-8 space-x-3">
+      <button id="main-back-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Back to Desk</button>
+    </div>
 </div>
 </nav>
 <!-- main section start -->
@@ -40,14 +42,31 @@
     <div>
         <h1 class="text-center text-2xl font-bold">Blog</h1>
         <!-- question div start -->
-        <div>
+        <div class="space-y-4 mt-5">
           <!-- question1 -->
-            <div>
-
+            <div class="bg-[#FFFFFF] text-lg rounded-lg">
+                <div class="p-3 font-bold border-b-2 border-dashed border-[#e5e5e9]">question-1: What are the different ways to select element an in DOM?</div>
+                <div class="p-3">The different ways to select an element in the DOM:  <span class="font-bold">1.</span>  getElementById() – Select by ID,  <span class="font-bold" class="font-bold">2.</span> getElementsByClassName() – Select by class,  <span class="font-bold">3.</span> getElementsByTagName() – Select by tag,  <span class="font-bold">4.</span> querySelector() – Select by CSS selector.</div>
+            </div>
+          <!-- question2 -->
+            <div class="bg-[#FFFFFF] text-lg rounded-lg">
+                <div class="p-3 font-bold border-b-2 border-dashed border-[#e5e5e9]">Question-2: What is the different between InnerHTML, InnerText, and textContent?</div>
+                <div class="p-3">The difference between innerHTML, innerText, and textContent: <span class="font-bold">1.</span>innerHTML – Gets or sets HTML inside an element, <span class="font-bold">2.</span>innerText – Gets or sets only visible text (ignores hidden text) , <span class="font-bold">3.</span>textContent – Gets or sets all text, including hidden ones.</div>
+            </div>
+          <!-- question1 -->
+            <div class="bg-[#FFFFFF] text-lg rounded-lg">
+                <div class="p-3 font-bold border-b-2 border-dashed border-[#e5e5e9]">Question-3: Wht is event delegation in the DOM?</div>
+                <div class="p-3">Event delegation is when an event listener is added to a parent element to manage events for child elements. It uses event bubbling to handle dynamic elements.
+                </div>
+            </div>
+          <!-- question1 -->
+            <div class="bg-[#FFFFFF] text-lg rounded-lg">
+                <div class="p-3 font-bold border-b-2 border-dashed border-[#e5e5e9]">question-4: What is the bubbling in the DOM?</div>
+                <div class="p-3">Bubbling in the DOM is when an event starts from the target element and propagates upwards through its parent elements. This allows parent elements to catch events triggered by their child elements.</div>
             </div>
         </div>
     </div>
 </main>
-    <script src="index.js"></script>
+<script src="./back.js"></script>
 </body>
 </html>
