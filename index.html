@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CND -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- DaisyUI CND -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- poppins google font cnd -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  }
+    .h3-class{
+      font-size : 14px;
+      font-weight: 400;
+      color: #000000;
+      background-color: #F4F7FF;
+      padding: 5px 6px;
+      margin: 10px 9px 4px 9px;
+      border-radius: 7px;
+    }
+    /*py-2 pl-3 mx-3 bg-[#F4F7FF] rounded-md mb-4" */
+  </style>
+  <title>Document</title>
+</head>
+<body class="bg-[#F4F7FF] min-h-screen poppins-thin">
+  <!-- Navbar section -->
+<nav class="py-3 px-12" >
+    <div class="navbar bg-[#FFFFFF] rounded-xl">
+  <div class="navbar-start">
+    <div class="flex items-center">
+        <img src="./images/logo.png" alt="">
+        <h1 class="text-[#00303C] lg:text-4xl text-3xl">Dev<span class="text-[#000000] font-bold">Board</span></h1>
+    </div>
+  </div>
+  <div class="navbar-end lg:space-x-8 space-x-3">
+    <div class="flex items-center space-x-1 bg-[#F4F7FF] px-3 py-1 rounded-3xl">
+      <img src="./images/checkbox.png" alt="">
+      <h1 id="update-value" class="text-2xl text-[#000000] font-bold"> 23 </h1>
+    </div>
+    <img id="bg-btn" class="p-1 bg-[#F4F7FF] rounded-full" src="./images/theme-btn.png" alt="">
+  </div>
+</div>
+</nav>
+  <!-- main section -->
+<section class="min-h-screen mx-12 flex">
+    <!-- Two div container -->
+    <div class="bg-[#FFFFFF] rounded-xl">
+      <!-- Three cards div -->
+      <div class="flex  border-b-2 border-dashed border-[#e5e5e9]">
+        <!-- task counting card -->
+        <div class="flex items-center space-x-3 py-7 px-9 m-4 bg-[#F4F7FF] rounded-xl">
+          <div class="p-3 rounded-3xl bg-[#FFFFFF]">
+            <img src="./images/checkbox.png" alt=""> 
+          </div>
+          <div>
+            <h3 class="text-base">Task Assigned</h3>
+            <p class="text-2xl font-bold"> 0<span id="task-assign">6</span></p>
+          </div>
+        </div>
+        <!-- next page card -->
+        <div id="next-html" class="flex cursor-pointer space-x-3 items-center py-4 px-14 my-4 rounded-xl bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#9BA8F8]">
+          <img src="./images/board.png" alt="">
+          <h1 class="text-lg text-[#FFFFFF]">Discover Something <br> New Today!</h1>
+        </div>
+        <!-- current vate -->
+        <div class="flex items-center py-7 space-x-3 px-9 m-4 bg-[#F4F7FF] rounded-xl">
+          <div class="p-3 rounded-3xl bg-[#FFFFFF]">
+            <img src="./images/calender.png" alt=""> 
+          </div>
+          <div>
+            <h3 id="dateDiv" class="text-lg font-bold"><br>
+              </h3>
+          </div>
+        </div>
+      </div>
+      <!-- ------------ -->
+      <!-- six card div start -->
+      <div class="grid grid-cols-3 m-4">
+        <!-- card1  -->
+        <div class="bg-[#F4F7FF] p-5 mr-4 mb-4 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4">
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-40 rounded-md">ShopEase</h3>
+            <h1 id="card1-head" class="text-xl text-[#00303C] my-2 font-semibold">Fix Mobile Button Issue </h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-5">
+              <div>
+                <h5 class="text-xs font-light">Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card1-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+        <!-- card2  -->
+        <div class="bg-[#F4F7FF] p-5 mr-4 mb-4 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4">
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-36 rounded-md">CloudSync</h3>
+            <h1 id="card2-head" class="text-xl text-[#00303C] my-2 font-semibold">Add Dark Mode </h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-5">
+              <div>
+                <h5 class="text-xs font-light">Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card2-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+        <!-- card3  -->
+        <div class="bg-[#F4F7FF] p-5 mb-4 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4"> 
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-44 rounded-md">SwiftPay</h3>
+            <h1 id="card3-head" class="text-xl text-[#00303C] my-2 font-semibold">Optimize  Home page</h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-9">
+              <div>
+                <h5 class="text-xs font-light">Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card3-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+        <!-- card4  -->
+        <div class="bg-[#F4F7FF] p-5 mr-4 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4">
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-48 rounded-md">Meta</h3>
+            <h1 id="card4-head" class="text-xl text-[#00303C] my-2 font-semibold">Add new emoji 🤲 </h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-5">
+              <div>
+                <h5 class="text-xs font-light"> Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card4-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+        <!-- card5  -->
+        <div class="bg-[#F4F7FF] p-5 mr-4 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4">
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-36 rounded-md">Google LLC</h3>
+            <h1 id="card5-head" class="text-xl text-[#00303C] my-2 font-semibold">Integrate OpenAI API </h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-5">
+              <div>
+                <h5 cclass="text-xs font-light">Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card5-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+        <!-- card6  -->
+        <div class="bg-[#F4F7FF] p-5 rounded-lg">
+          <div class="border-b-2 border-dashed border-[#e5e5e9] mb-4">
+            <h3 class="text-sm text-[#00303C] font-medium py-2 pl-3 bg-[#FFFFFF] mr-40 rounded-md">Glassdoar</h3>
+            <h1 id="card6-head" class="text-xl text-[#00303C] my-2 font-semibold">Improve Job searching </h1>
+            <h3 class="text-sm text-[#000000] font-extralight py-4 pl-3 bg-[#FFFFFF] rounded-md mb-4">Debug using Chrome DevTools, check for overlapping...</h3>
+          </div>
+          <div class="flex items-center space-x-9">
+              <div>
+                <h5 class="text-xs font-light">Deadline</h5>
+                <h3 class="text-base font-semibold">21 March 2025</h3>
+              </div>
+              <button id="card6-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Completed</button>
+          </div> 
+        </div>
+      </div>
+    </div>
+    <!-- history div start -->
+    <div class="bg-[#FFFFFF] ml-4 rounded-xl w-1/3">
+          <div class="text-center border-b-2 mb-4 border-dashed border-[#e5e5e9]">
+            <div class="flex mb-4 mt-7">
+                <img class="ml-14" src="./images/activity.png" alt="">
+                <h1 class="ml-2 text-2xl font-semibold text-[#00303C]">Activity Log</h1>
+            </div>
+                <button id="history-btn" class="btn mb-7 text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Clear History</button>
+          </div>
+          <div id="history-parent"></div>
+    </div>
+</section>
+<!-- js Link -->
+<script src="index.js"></script>
+</body>
+</html>
