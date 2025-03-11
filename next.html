@@ -3,10 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CND -->
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <!-- DaisyUI CND -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- poppins google font cnd -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <style>
+    .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  }
+  </style>
   <title>Document</title>
 </head>
-<body>
-      <h1>Hello Sifad</h1>
+<body class="bg-[#F4F7FF] min-h-screen poppins-thin">
+<!-- Navbar section -->
+<nav class="py-3 px-12" >
+  <div class="navbar bg-[#FFFFFF] rounded-xl">
+<div class="navbar-start">
+  <div class="flex items-center">
+      <img src="./images/logo.png" alt="">
+      <h1 class="text-[#00303C] lg:text-4xl text-3xl">Dev<span class="text-[#000000] font-bold">Board</span></h1>
+  </div>
+</div>
+<div class="navbar-end lg:space-x-8 space-x-3">
+  <button id="card1-btn" class="btn text-center bg-[#3752FD] text-[#FFFFFF] rounded-lg">Back to Desk</button>
+</div>
+</div>
+</nav>
+<!-- main section start -->
+<main  class="min-h-screen mx-12"> 
+  <!-- Blog section start -->
+    <div>
+        <h1 class="text-center text-2xl font-bold">Blog</h1>
+        <!-- question div start -->
+        <div>
+          <!-- question1 -->
+            <div>
+
+            </div>
+        </div>
+    </div>
+</main>
     <script src="index.js"></script>
 </body>
 </html>
